@@ -23,6 +23,11 @@ namespace Inventory_Management_System
            openChildForm(new UserForm());
         }
 
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CustomerForm());
+        }
+
         #region METHODS
         private void openChildForm(Form childForm)
         {
@@ -39,6 +44,6 @@ namespace Inventory_Management_System
             childForm.BringToFront();
             childForm.Show();
         }
-        #endregion METHODS
+        #endregion METHODS               
     }
 }

@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,8 +41,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +51,41 @@
             this.panel2.Controls.Add(this.btnAddUser);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 531);
+            this.panel2.Location = new System.Drawing.Point(0, 548);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(1100, 60);
+            this.panel2.Size = new System.Drawing.Size(1024, 60);
             this.panel2.TabIndex = 2;
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddUser.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnAddUser.HoverState.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
+            this.btnAddUser.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAddUser.ImageRotate = 0F;
+            this.btnAddUser.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnAddUser.Location = new System.Drawing.Point(977, 13);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnAddUser.PressedState.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnAddUser.Size = new System.Drawing.Size(35, 35);
+            this.btnAddUser.TabIndex = 4;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Manage Users";
             // 
             // dgvUser
             // 
@@ -64,7 +94,7 @@
             this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -86,8 +116,9 @@
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 24;
-            this.dgvUser.Size = new System.Drawing.Size(1100, 531);
+            this.dgvUser.Size = new System.Drawing.Size(1024, 548);
             this.dgvUser.TabIndex = 3;
+            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
             // Column5
             // 
@@ -103,7 +134,7 @@
             this.Column1.HeaderText = "User Name";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 134;
+            this.Column1.Width = 132;
             // 
             // Column2
             // 
@@ -118,7 +149,7 @@
             this.Column3.HeaderText = "Password";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 119;
+            this.Column3.Width = 117;
             // 
             // Column4
             // 
@@ -126,7 +157,7 @@
             this.Column4.HeaderText = "Phone";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 93;
+            this.Column4.Width = 94;
             // 
             // Edit
             // 
@@ -146,46 +177,16 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 6;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 23);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Manage Users";
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddUser.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnAddUser.HoverState.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
-            this.btnAddUser.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnAddUser.ImageRotate = 0F;
-            this.btnAddUser.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnAddUser.Location = new System.Drawing.Point(1053, 13);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnAddUser.PressedState.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnAddUser.Size = new System.Drawing.Size(35, 35);
-            this.btnAddUser.TabIndex = 4;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 591);
+            this.ClientSize = new System.Drawing.Size(1024, 608);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserForm";

@@ -26,7 +26,43 @@ namespace Inventory_Management_System
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             UserModuleForm userModuleForm = new UserModuleForm();
-            userModuleForm.Show();          
+            userModuleForm.btnSave.Enabled = true;
+            userModuleForm.btnUpdate.Enabled = false;
+            userModuleForm.ShowDialog();
+            LoadData();
+        }
+
+        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dgvUser.Columns[e.ColumnIndex].Name;
+            if(colName == "Edit")
+            {
+                UserModuleForm userModuleForm = new UserModuleForm();
+                userModuleForm.txtUsername.Text = dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString();
+                userModuleForm.txtFullname.Text = dgvUser.Rows[e.RowIndex].Cells[2].Value.ToString();
+                userModuleForm.txtPassword.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
+                userModuleForm.txtPhone.Text = dgvUser.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                userModuleForm.btnSave.Enabled = false;
+                userModuleForm.btnUpdate.Enabled = true;
+                userModuleForm.txtUsername.Enabled = false;
+                userModuleForm.ShowDialog();
+            }
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Ingin delete user ini?", "Deleting User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cmd = new SqlCommand("DELETE FROM tbUser WHERE username = @username", con);
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@username", dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User berhasil dihapus", "Deleting User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
+                }
+            }
+
+            LoadData();
         }
 
         #region METHODS
