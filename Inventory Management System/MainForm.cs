@@ -20,16 +20,21 @@ namespace Inventory_Management_System
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-           openChildForm(new UserForm());
+           openChildForm(new UserForm(), "USERS");
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            openChildForm(new CustomerForm());
+            openChildForm(new CustomerForm(), "CUSTOMERS");
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CategoryForm(), "CATEGORIES");
         }
 
         #region METHODS
-        private void openChildForm(Form childForm)
+        private void openChildForm(Form childForm, string form)
         {
             if (activeForm != null)
             {
@@ -41,9 +46,10 @@ namespace Inventory_Management_System
             childForm.Dock = DockStyle.Fill;
             panelMain.Controls.Add(childForm);
             panelMain.Tag = childForm;
+            labelForm.Text = form;
             childForm.BringToFront();
             childForm.Show();
         }
-        #endregion METHODS               
+        #endregion METHODS                      
     }
 }
