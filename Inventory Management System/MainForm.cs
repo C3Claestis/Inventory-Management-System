@@ -32,7 +32,10 @@ namespace Inventory_Management_System
         {
             openChildForm(new CategoryForm(), "CATEGORIES");
         }
-
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ProductForm(), "PRODUCTS");
+        }
         #region METHODS
         private void openChildForm(Form childForm, string form)
         {
@@ -51,5 +54,7 @@ namespace Inventory_Management_System
             childForm.Show();
         }
         #endregion METHODS                      
+
+        
     }
 }

@@ -209,6 +209,7 @@
             this.btnProduct.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnProduct.Size = new System.Drawing.Size(64, 54);
             this.btnProduct.TabIndex = 3;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // guna2CirclePictureBox1
             // 

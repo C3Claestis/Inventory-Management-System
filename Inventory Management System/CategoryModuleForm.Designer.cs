@@ -162,6 +162,7 @@
             // CategoryModuleForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 275);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel1);

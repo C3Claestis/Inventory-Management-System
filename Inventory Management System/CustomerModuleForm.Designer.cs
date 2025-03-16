@@ -183,6 +183,7 @@
             // CustomerModuleForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 325);
             this.Controls.Add(this.labelcsId);
             this.Controls.Add(this.btnUpdate);
