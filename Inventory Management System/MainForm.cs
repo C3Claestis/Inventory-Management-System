@@ -36,6 +36,10 @@ namespace Inventory_Management_System
         {
             openChildForm(new ProductForm(), "PRODUCTS");
         }
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderForm(), "ORDERS");
+        }
         #region METHODS
         private void openChildForm(Form childForm, string form)
         {
@@ -53,8 +57,9 @@ namespace Inventory_Management_System
             childForm.BringToFront();
             childForm.Show();
         }
+
         #endregion METHODS                      
 
-        
+       
     }
 }

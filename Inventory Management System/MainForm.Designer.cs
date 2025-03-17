@@ -150,6 +150,7 @@
             this.btnOrders.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnOrders.Size = new System.Drawing.Size(64, 54);
             this.btnOrders.TabIndex = 9;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnUser
             // 
@@ -243,7 +244,7 @@
             this.panelMain.Location = new System.Drawing.Point(0, 180);
             this.panelMain.Name = "panelMain";
             this.panelMain.Padding = new System.Windows.Forms.Padding(1);
-            this.panelMain.Size = new System.Drawing.Size(1024, 600);
+            this.panelMain.Size = new System.Drawing.Size(1024, 588);
             this.panelMain.TabIndex = 3;
             // 
             // panel1

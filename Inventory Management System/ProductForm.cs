@@ -66,13 +66,17 @@ namespace Inventory_Management_System
 
             LoadData();
         }
+        private void txtSrchPro_TextChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
 
         #region METHODS
         public void LoadData()
         {
             int i = 0;
             dgvProduct.Rows.Clear();
-            cmd = new SqlCommand("SELECT * FROM tbProduct", con);
+            cmd = new SqlCommand("SELECT * FROM tbProduct WHERE CONCAT(pname,pprice,pdescription,pcategory) LIKE '%"+txtSrchPro.Text+"%'", con);
             con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -84,5 +88,7 @@ namespace Inventory_Management_System
             con.Close();
         }
         #endregion METHODS       
+
+        
     }
 }
