@@ -62,5 +62,10 @@ namespace Inventory_Management_System
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonForgetpass_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please contact the system administrator", "Forgot Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
