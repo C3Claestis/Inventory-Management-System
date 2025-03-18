@@ -46,9 +46,13 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelForm = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.panelMain.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -240,6 +244,8 @@
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.Controls.Add(this.label7);
+            this.panelMain.Controls.Add(this.guna2CirclePictureBox2);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMain.Location = new System.Drawing.Point(0, 180);
             this.panelMain.Name = "panelMain";
@@ -270,6 +276,29 @@
             this.labelForm.Text = "WELCOME";
             this.labelForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(225, 20);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(550, 550);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 0;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label7.Location = new System.Drawing.Point(864, 557);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 22);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "@Copyright MJS";
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -288,7 +317,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -311,5 +343,7 @@
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelForm;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private System.Windows.Forms.Label label7;
     }
 }

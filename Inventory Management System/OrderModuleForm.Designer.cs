@@ -35,9 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSrchCust = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,12 +47,19 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOrderInsert = new Guna.UI2.WinForms.Guna2Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.dateOrder = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPname = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSrchPro = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,20 +71,14 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnClear = new Guna.UI2.WinForms.Guna2Button();
-            this.btnOrderUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnOrderInsert = new Guna.UI2.WinForms.Guna2Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.labelOID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -120,9 +121,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.labelOID);
+            this.panel2.Controls.Add(this.txtCname);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtCId);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtSrchCust);
             this.panel2.Controls.Add(this.label4);
@@ -134,14 +136,15 @@
             this.panel2.Size = new System.Drawing.Size(276, 535);
             this.panel2.TabIndex = 16;
             // 
-            // textBox2
+            // txtCname
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(28, 392);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 28);
-            this.textBox2.TabIndex = 24;
+            this.txtCname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCname.Enabled = false;
+            this.txtCname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCname.Location = new System.Drawing.Point(28, 392);
+            this.txtCname.Name = "txtCname";
+            this.txtCname.Size = new System.Drawing.Size(220, 28);
+            this.txtCname.TabIndex = 24;
             // 
             // label7
             // 
@@ -154,14 +157,15 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Customer Name :";
             // 
-            // textBox1
+            // txtCId
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(28, 332);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 28);
-            this.textBox1.TabIndex = 22;
+            this.txtCId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCId.Enabled = false;
+            this.txtCId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCId.Location = new System.Drawing.Point(28, 332);
+            this.txtCId.Name = "txtCId";
+            this.txtCId.Size = new System.Drawing.Size(220, 28);
+            this.txtCId.TabIndex = 22;
             // 
             // label6
             // 
@@ -234,6 +238,7 @@
             this.dgvCustomer.RowTemplate.Height = 24;
             this.dgvCustomer.Size = new System.Drawing.Size(276, 222);
             this.dgvCustomer.TabIndex = 17;
+            this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             // 
             // Column5
             // 
@@ -260,21 +265,20 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.numericUpDown1);
             this.panel3.Controls.Add(this.btnClear);
-            this.panel3.Controls.Add(this.btnOrderUpdate);
             this.panel3.Controls.Add(this.btnOrderInsert);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.txtTotal);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.txtPrice);
+            this.panel3.Controls.Add(this.dateOrder);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.txtPname);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.txtSrchPro);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.txtPId);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label3);
@@ -285,12 +289,101 @@
             this.panel3.Size = new System.Drawing.Size(673, 535);
             this.panel3.TabIndex = 17;
             // 
-            // dateTimePicker1
+            // btnClear
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 455);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(260, 26);
-            this.dateTimePicker1.TabIndex = 30;
+            this.btnClear.BorderRadius = 20;
+            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClear.FillColor = System.Drawing.Color.Red;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(562, 468);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(100, 55);
+            this.btnClear.TabIndex = 39;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnOrderInsert
+            // 
+            this.btnOrderInsert.BorderRadius = 20;
+            this.btnOrderInsert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOrderInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOrderInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOrderInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOrderInsert.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnOrderInsert.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderInsert.ForeColor = System.Drawing.Color.White;
+            this.btnOrderInsert.Location = new System.Drawing.Point(443, 468);
+            this.btnOrderInsert.Name = "btnOrderInsert";
+            this.btnOrderInsert.Size = new System.Drawing.Size(100, 55);
+            this.btnOrderInsert.TabIndex = 37;
+            this.btnOrderInsert.Text = "Order Insert";
+            this.btnOrderInsert.Click += new System.EventHandler(this.btnOrderInsert_Click);
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(439, 401);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 20);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Total :";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(439, 331);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 20);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Price :";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(499, 397);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(162, 28);
+            this.txtTotal.TabIndex = 34;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(439, 366);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 20);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Qty :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(499, 327);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(162, 28);
+            this.txtPrice.TabIndex = 26;
+            // 
+            // dateOrder
+            // 
+            this.dateOrder.CustomFormat = "dd/MM/yyyy";
+            this.dateOrder.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateOrder.Location = new System.Drawing.Point(16, 455);
+            this.dateOrder.Name = "dateOrder";
+            this.dateOrder.Size = new System.Drawing.Size(260, 26);
+            this.dateOrder.TabIndex = 30;
             // 
             // label10
             // 
@@ -303,14 +396,15 @@
             this.label10.TabIndex = 29;
             this.label10.Text = "Order Date :";
             // 
-            // textBox3
+            // txtPname
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(16, 392);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 28);
-            this.textBox3.TabIndex = 28;
+            this.txtPname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPname.Enabled = false;
+            this.txtPname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPname.Location = new System.Drawing.Point(16, 392);
+            this.txtPname.Name = "txtPname";
+            this.txtPname.Size = new System.Drawing.Size(260, 28);
+            this.txtPname.TabIndex = 28;
             // 
             // label8
             // 
@@ -319,9 +413,9 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(12, 369);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 20);
+            this.label8.Size = new System.Drawing.Size(123, 20);
             this.label8.TabIndex = 27;
-            this.label8.Text = "Customer Name :";
+            this.label8.Text = "Product Name :";
             // 
             // txtSrchPro
             // 
@@ -333,14 +427,15 @@
             this.txtSrchPro.TabIndex = 22;
             this.txtSrchPro.TextChanged += new System.EventHandler(this.txtSrchPro_TextChanged);
             // 
-            // textBox4
+            // txtPId
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(16, 332);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 28);
-            this.textBox4.TabIndex = 26;
+            this.txtPId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPId.Enabled = false;
+            this.txtPId.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPId.Location = new System.Drawing.Point(16, 332);
+            this.txtPId.Name = "txtPId";
+            this.txtPId.Size = new System.Drawing.Size(260, 28);
+            this.txtPId.TabIndex = 26;
             // 
             // label5
             // 
@@ -360,9 +455,9 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(12, 309);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 20);
+            this.label9.Size = new System.Drawing.Size(94, 20);
             this.label9.TabIndex = 25;
-            this.label9.Text = "Customer Id :";
+            this.label9.Text = "Product Id :";
             // 
             // label3
             // 
@@ -407,6 +502,7 @@
             this.dgvProduct.RowTemplate.Height = 24;
             this.dgvProduct.Size = new System.Drawing.Size(673, 222);
             this.dgvProduct.TabIndex = 18;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -463,113 +559,32 @@
             this.Column7.Name = "Column7";
             this.Column7.Width = 106;
             // 
-            // textBox5
+            // numericUpDown1
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(499, 327);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 28);
-            this.textBox5.TabIndex = 26;
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.Location = new System.Drawing.Point(499, 364);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(162, 26);
+            this.numericUpDown1.TabIndex = 40;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // textBox6
+            // labelOID
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(499, 362);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(162, 28);
-            this.textBox6.TabIndex = 32;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(439, 366);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 20);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Qty :";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(499, 397);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(162, 28);
-            this.textBox7.TabIndex = 34;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(439, 331);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 20);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Price :";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(439, 401);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 20);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Total :";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnClear
-            // 
-            this.btnClear.BorderRadius = 20;
-            this.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClear.FillColor = System.Drawing.Color.Red;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(562, 468);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 55);
-            this.btnClear.TabIndex = 39;
-            this.btnClear.Text = "CLEAR";
-            // 
-            // btnOrderUpdate
-            // 
-            this.btnOrderUpdate.BorderRadius = 20;
-            this.btnOrderUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOrderUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOrderUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOrderUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOrderUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnOrderUpdate.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnOrderUpdate.Location = new System.Drawing.Point(443, 468);
-            this.btnOrderUpdate.Name = "btnOrderUpdate";
-            this.btnOrderUpdate.Size = new System.Drawing.Size(100, 55);
-            this.btnOrderUpdate.TabIndex = 38;
-            this.btnOrderUpdate.Text = "Order Update";
-            // 
-            // btnOrderInsert
-            // 
-            this.btnOrderInsert.BorderRadius = 20;
-            this.btnOrderInsert.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOrderInsert.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOrderInsert.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOrderInsert.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOrderInsert.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnOrderInsert.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderInsert.ForeColor = System.Drawing.Color.White;
-            this.btnOrderInsert.Location = new System.Drawing.Point(324, 468);
-            this.btnOrderInsert.Name = "btnOrderInsert";
-            this.btnOrderInsert.Size = new System.Drawing.Size(100, 55);
-            this.btnOrderInsert.TabIndex = 37;
-            this.btnOrderInsert.Text = "Order Insert";
+            this.labelOID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelOID.AutoSize = true;
+            this.labelOID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOID.ForeColor = System.Drawing.Color.Black;
+            this.labelOID.Location = new System.Drawing.Point(24, 493);
+            this.labelOID.Name = "labelOID";
+            this.labelOID.Size = new System.Drawing.Size(71, 20);
+            this.labelOID.TabIndex = 25;
+            this.labelOID.Text = "Order Id";
+            this.labelOID.Visible = false;
             // 
             // OrderModuleForm
             // 
@@ -591,6 +606,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -620,24 +636,24 @@
         private System.Windows.Forms.TextBox txtSrchCust;
         private System.Windows.Forms.TextBox txtSrchPro;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
         public Guna.UI2.WinForms.Guna2Button btnClear;
-        public Guna.UI2.WinForms.Guna2Button btnOrderUpdate;
         public Guna.UI2.WinForms.Guna2Button btnOrderInsert;
+        public System.Windows.Forms.Label labelOID;
+        public System.Windows.Forms.DateTimePicker dateOrder;
+        public System.Windows.Forms.TextBox txtCId;
+        public System.Windows.Forms.TextBox txtCname;
+        public System.Windows.Forms.TextBox txtPname;
+        public System.Windows.Forms.TextBox txtPId;
+        public System.Windows.Forms.TextBox txtTotal;
+        public System.Windows.Forms.TextBox txtPrice;
+        public System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
